@@ -60,5 +60,6 @@ class MainActivity : AppCompatActivity() {
         Num2.text = null
         txt_total.text = ""
         txt_troco.text = ""
+        txt_taxa.text = ""
     }
 }
