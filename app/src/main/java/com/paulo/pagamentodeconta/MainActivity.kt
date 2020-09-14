@@ -38,22 +38,29 @@ class MainActivity : AppCompatActivity() {
 
                 }
             }
-
         )
-
-
 
     }
     private fun calcular(){
+        if ((Num1.text.toString() != "") && (Num2.text.toString() != "")){
         var Num1 = Num1.text.toString().toInt()
         var Num2 = Num2.text.toString().toInt()
         var Num3 = txt_porcento.text.toString().toInt()
-        Num1 = Num1 + Num3
-        var troco = (Num2 - Num1)
-
-        txt_taxa.text = "R$"+ Num3
-        txt_total.text = "R$"+ Num1
-        txt_troco.text = "R$"+ troco
+            if((Num1 + Num3) > Num2){
+                Num1 = Num1 + Num3
+                var troco = (Num2 - Num1)
+                txt_taxa.text = "R$"+ Num3
+                txt_total.text = "R$"+ Num1
+                txt_troco.text= "Não há dinheiro o suficiente para pagar a conta"
+            }
+            else{
+                Num1 = Num1 + Num3
+                var troco = (Num2 - Num1)
+                txt_taxa.text = "R$"+ Num3
+                txt_total.text = "R$"+ Num1
+                txt_troco.text = "R$"+ troco
+            }
+        }
     }
     private fun limpar(){
         Num1.text = null

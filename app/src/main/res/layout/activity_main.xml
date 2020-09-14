@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EBFBFD"
+    android:background="#FBFFFF"
     tools:context=".MainActivity">
 
     <TextView
@@ -194,8 +194,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:indeterminate="false"
-        android:max="30"
         android:min="10"
+        android:max="30"
         android:progressTint="#5C6BC0"
         app:layout_constraintBottom_toTopOf="@+id/btn_limpar"
         app:layout_constraintEnd_toEndOf="parent"
